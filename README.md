@@ -14,15 +14,15 @@ regex components.
 
 Result and runtime comparison for the two main examples (Star Wars/Trek and presidents):
 ```
-Peter:                9 chars  0.57 seconds  ' T|E.P| N'
-Optimal:              9 chars  0.38 seconds  ' T|E.P|^A'
-Peter with pairs:     9 chars  0.82 seconds  ' .?T|P.*E'
-Optimal with pairs:   7 chars  0.69 seconds  ' T|P.*E'
+Peter                9 chars  0.57 seconds  ' T|E.P| N'
+Optimal              9 chars  0.38 seconds  ' T|E.P|^A'
+Peter with pairs     9 chars  0.82 seconds  ' .?T|P.*E'
+Optimal with pairs   7 chars  0.69 seconds  ' T|P.*E'
 
-Peter:               54 chars  3.37 seconds  'a.a|a..i|j|li|a.t|i..n|bu|oo|n.e|ay.|r.e$|tr|ls|po|v.l'
-Optimal:             52 chars  1.51 seconds  'j|po|a.a|a..i|bu|ma|ix|ho|li|v.l|ls|a.t|ay.|n.e|r.e$'
-Peter with pairs:    49 chars  3.64 seconds  'i.*o|o.*o|a.a|.f|bu|n.e|ay.|a.t|j|tr|di|rc|po|v.l'
-Optimal with pairs:  47 chars  2.80 seconds  'po|i.*o|bu|o.*o|j|a.a|a.t|v.l|r.i|rc|ay.|ma|n.e'
+Peter               54 chars  3.37 seconds  'a.a|a..i|j|li|a.t|i..n|bu|oo|n.e|ay.|r.e$|tr|ls|po|v.l'
+Optimal             52 chars  1.51 seconds  'j|po|a.a|a..i|bu|ma|ix|ho|li|v.l|ls|a.t|ay.|n.e|r.e$'
+Peter with pairs    49 chars  3.64 seconds  'i.*o|o.*o|a.a|.f|bu|n.e|ay.|a.t|j|tr|di|rc|po|v.l'
+Optimal with pairs  47 chars  2.80 seconds  'po|i.*o|bu|o.*o|j|a.a|a.t|v.l|r.i|rc|ay.|ma|n.e'
 ```
 
 In the "with pairs" versions, I added components of the forms `a.*b`, `a.+b` and `a.?b`.  
