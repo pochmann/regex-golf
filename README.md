@@ -37,11 +37,11 @@ more components useless, so the two steps are repeated until nothing changes any
 After this, every still not covered winner has at least two components that can
 cover it, so we can pick the best looking component and try with and without it.
 
-Variables explained:
+Variables of `findregex` explained:
 
 `winners`:  Strings that must be matched. Abbreviated `w` (single) or `ws` (plural).  
 `losers`:   Strings that must not be matched.  
-`c and cs`: The components (single and plural).  
+`c and cs`: The regex components (single and plural).  
 `covers`:   Dictionary mapping each component to a set of winners it matches.  
 `answer`:   Semi-global variable holding the best regex found so far.  
 `regex`:    The regex being built (with '|'-prefix for simplicity).
