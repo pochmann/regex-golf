@@ -1,3 +1,5 @@
+"""See the README for explanations/results."""
+
 def findregex(winners, losers):
     """"Find a regex that matches all winners but no losers (sets of strings)."""
 
