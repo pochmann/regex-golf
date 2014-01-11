@@ -25,7 +25,7 @@ def findregex(winners, losers):
             for c, ws in covers.items():
                 for w in ws:
                     coverers.setdefault(w, []).append(c)
-            needed = {cs[0] for w,cs in coverers.items() if len(cs) == 1}
+            needed = {cs[0] for cs in coverers.values() if len(cs) == 1}
             if needed:
                 regex += '|' + '|'.join(needed)
                 covered = {w for c in needed for w in covers[c]}
