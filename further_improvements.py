@@ -1,4 +1,4 @@
-"""Improvements to Peter's supporting functions."""
+"""Further improvements to Peter's program."""
 
 # Components of the form a.*b, a.+b and a.?b help get better results:
 
