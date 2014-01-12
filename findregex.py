@@ -1,5 +1,7 @@
 """See the README for explanations/results."""
 
+from collections import defaultdict
+
 def findregex(winners, losers):
     """"Find a regex that matches all winners but no losers (sets of strings)."""
 
@@ -21,10 +23,10 @@ def findregex(winners, losers):
             covers = COVERS
 
             # For winners covered only by one component, use those needed components now.
-            coverers = {}
+            coverers = defaultdict(list)
             for c, ws in covers.items():
                 for w in ws:
-                    coverers.setdefault(w, []).append(c)
+                    coverers[w].append(c)
             needed = {cs[0] for cs in coverers.values() if len(cs) == 1}
             if needed:
                 regex += '|' + '|'.join(needed)
